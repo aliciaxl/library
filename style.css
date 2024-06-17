@@ -1,0 +1,76 @@
+
+
+
+body {
+    font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+    font-family: "Playwrite BR", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.add_button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+.dialog {
+    width: 50%;
+    max-width: 360px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.dialog_header,
+.dialog_content,
+.dialog_submit {
+    margin: 1.25em;
+}
+
+.dialog_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cancel_button:hover  {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.dialog_content {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-right: 12px;
+}
+
+.dialog_input {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+    border-radius: 8px;
+}
+
+.dialog_submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit_button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
