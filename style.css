@@ -74,3 +74,8 @@ label {
     opacity: 0.9;
     cursor: pointer;
 }
+
+.book_card {
+    width: 50%;
+    
+}
