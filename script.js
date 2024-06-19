@@ -26,6 +26,8 @@ function createBookCard(book) {
   // append book read toggle into card
   card.appendChild(createBookReadToggle(book.read));
 
+  const readToggle = document.querySelector('#read_toggle');
+
   // append remove button to card directly
   const removeButton = createBookRemoveButton();
   removeButton.addEventListener("click", function(){
@@ -91,7 +93,7 @@ addForm.addEventListener("submit", function (event) {
     // Fetch form input values
     let title = document.querySelector("#title").value;
     let author = document.querySelector("#author").value;
-    let pages = parseInt(document.querySelector("#pages").value);
+    let pages = parseInt(document.querySelector("#pages").value) + ' pages';
     let read = document.querySelector("#read").checked;
   
     // Add book to library and create card
@@ -104,3 +106,5 @@ addForm.addEventListener("submit", function (event) {
 
 
 //Because we need to do form validation on form element wrapped inside dialog element, we select the form and validate when submit button is pressed before allowing other events to happen. We do not use onclick or onsubmit on the submit button directly unless we write our own validation function and use it inside here. Built-in HTML5 validation can only happen on form element directly. 
+
+// const dialog = document.querySelector(".dialog");dialog.showModal();

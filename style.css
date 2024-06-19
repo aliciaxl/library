@@ -1,47 +1,68 @@
 html {
-    background-color: #eae7db;
+    background-color: #eceae1;
     padding: 0px;
     margin: 0px;
+}
+
+@font-face {
+    font-family: Calinor;
+    src: url(CALINORPEGASUS.ttf);
 }
 
 
 body {
-    font-family: "Figtree", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
     padding: 0px;
     margin: 0px;
 }
 
-h1 {
+header {
+    
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#library_title {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0px;
-    margin: 8px 0px 32px 8px;
-    font-family: "Zen Dots", sans-serif;
+    margin: 0px;
+    font-family: Calinor;
     font-weight: 400;
-    font-size: 100px;
+    font-size: 240px;
     font-style: normal;
-    color: rgb(0, 0, 255);
+    color: black;
     /* transform: rotate(90deg); */
   }
 
 .add_button {
-    margin: 16px;
-    color: rgb(0, 0, 255);
-    border: solid 2px rgb(0, 0, 255);
-    background-color: #c4fbe0;
+    display: grid;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    margin: -48px 0px 16px 0px;
+    color: black;
+    border: solid 2px black;
+    background-color: WHITE;
     border-radius: 12px;
     height: 40px;
     width: 148px;
     font-size: 1.4em;
 
 
-    font-family: "Figtree", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+    font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .add_button:hover {
@@ -50,13 +71,14 @@ h1 {
 }
 
 #librarybody {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
     align-items: center;
-    background-color: rgb(234, 227, 223);
+    background-color: #dbfc03;
     border-radius: 12px;
-    margin: 0px 160px 72px 160px;
-    height: calc(100vh - 144px);
+    margin: 0px 12px 12px 12px;
+    padding: 0px 0px 32px 0px;
 }
 
 #catalog {
@@ -66,19 +88,14 @@ h1 {
 
 .dialog {
     width: 50%;
-    max-width: 360px;
+    max-width: 280px;
     border-radius: 5px;
-    border: solid 2px rgb(0, 0, 255);
+    border: solid 2px black;
     outline: none;
     padding: 0px;
     overflow: hidden;
-    color: rgb(0, 0, 255);
-}
-
-.dialog_header,
-.dialog_content,
-.dialog_submit {
-    margin: 1.25em;
+    color: black;
+    height: 300px;
 }
 
 .dialog_header {
@@ -86,6 +103,9 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin: 1.6em 1.25em;
 }
 
 .cancel_button:hover  {
@@ -93,9 +113,17 @@ h1 {
     cursor: pointer;
 }
 
+.cancel_button {
+    color: black;
+    border: solid 2px black;
+    background-color: aquamarine;
+    border-radius: 8px;
+}
+
 .dialog_content {
     display: flex;
     flex-direction: column;
+    margin: 1.25em;
 }
 
 label {
@@ -104,14 +132,59 @@ label {
 
 .dialog_input {
     display: flex;
-    flex-direction: row;
-    margin-top: 12px;
+    align-items: center;
+    margin-bottom: 12px;
     border-radius: 8px;
+    font-size: 1.1em;
 }
+
+input {
+    border: solid 1px black;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color:rgb(231, 253, 246);
+    width: 100%;
+
+    font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+input::placeholder {
+    color: black;
+}
+
+/* Remove number input spinner (for WebKit browsers) */
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+  
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Optional - if you want to remove the gap where the buttons were */
+  }
 
 .dialog_submit {
     display: flex;
     justify-content: center;
+    margin-bottom: 1.25em;
+}
+
+.submit_button {
+    color: black;
+    border: solid 2px black;
+    background-color: aquamarine;
+    border-radius: 8px;
+    font-size: 1.05em;
+    height: 28px;
+    width: 72px;
+
+    font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .submit_button:hover {
@@ -120,13 +193,74 @@ label {
 }
 
 .book_card {
-    width: 50%;
+    padding: 24px;
+}
+#read {
+    width: 20px;
+}
+#readcheck {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#catalog {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 12px 80px;
+    width: 100%;
+}
+
+.book_card {
+    display: grid;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 8px;
+    min-width: 320px;
+    height: 100%;
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+    margin: auto;
 
 }
 
-@media only screen and (max-width: 1200px) {
-     #librarybody {
+.book_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px 12px 0px 12px;
+    font-size: 1.2em;
+    font-weight: 400;
+
+}
+
+#read_toggle {  
+    background-color: rgb(232, 175, 253);
+}
+
+.remove_button {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    margin: 12px;
+    
+}
+
+/* @media only screen and (max-width: 1500px) {
+
+    #catalog {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #librarybody {
             margin: 0px 100px 72px 100px;
      }
 
-    }
+    } */
