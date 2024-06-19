@@ -1,23 +1,66 @@
-
+html {
+    background-color: #eae7db;
+    padding: 0px;
+    margin: 0px;
+}
 
 
 body {
     font-family: "Figtree", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h1 {
-    font-family: "Playwrite BR", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 8px 0px 32px 8px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    font-style: normal;
+    color: rgb(0, 0, 255);
+    /* transform: rotate(90deg); */
   }
+
+.add_button {
+    margin: 16px;
+    color: rgb(0, 0, 255);
+    border: solid 2px rgb(0, 0, 255);
+    background-color: #c4fbe0;
+    border-radius: 12px;
+    height: 40px;
+    width: 148px;
+    font-size: 1.4em;
+
+
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
 
 .add_button:hover {
     opacity: 0.9;
     cursor: pointer;
+}
+
+#librarybody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(234, 227, 223);
+    border-radius: 12px;
+    margin: 0px 160px 72px 160px;
+    height: calc(100vh - 144px);
+}
+
+#catalog {
+    
 }
 
 
@@ -25,10 +68,11 @@ h1 {
     width: 50%;
     max-width: 360px;
     border-radius: 5px;
-    border: none;
+    border: solid 2px rgb(0, 0, 255);
     outline: none;
     padding: 0px;
     overflow: hidden;
+    color: rgb(0, 0, 255);
 }
 
 .dialog_header,
@@ -77,5 +121,12 @@ label {
 
 .book_card {
     width: 50%;
-    
+
 }
+
+@media only screen and (max-width: 1200px) {
+     #librarybody {
+            margin: 0px 100px 72px 100px;
+     }
+
+    }

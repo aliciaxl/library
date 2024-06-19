@@ -1,5 +1,4 @@
 
-
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -27,7 +26,7 @@ function createBookCard(book) {
   // append book read toggle into card
   card.appendChild(createBookReadToggle(book.read));
 
-  // append remove button to card
+  // append remove button to card directly
   const removeButton = createBookRemoveButton();
   removeButton.addEventListener("click", function(){
     card.remove();
@@ -77,41 +76,31 @@ cancelBtn.onclick = function () {
   dialog.close();
 };
 
+// Select form, listen for when form is submitted
+const addForm = document.querySelector("#add_form");
 
-// function to validate form inputs
+addForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+  
+    // Validate form using HTML5 built-in validation
+    if (!addForm.checkValidity()) {
+      // If form is not valid, browser will show native error messages
+      return;
+    }
+  
+    // Fetch form input values
+    let title = document.querySelector("#title").value;
+    let author = document.querySelector("#author").value;
+    let pages = parseInt(document.querySelector("#pages").value);
+    let read = document.querySelector("#read").checked;
+  
+    // Add book to library and create card
+    addBookToLibrary(title, author, pages, read);
+  
+    // Clear form inputs
+    addForm.reset(); // Reset form fields
+    dialog.close(); // Close dialog
+  });
 
-// function validateForm(title, author, pages){
-//     if (title.trim() == '' || author.trim() == '' || isNaN(pages) || parseInt(pages) <= 0){
-//         return false;
-//     } else {
-//         return true;
-//     }
-// }
 
-
-// when submit is clicked, validate form, return error messages if invalid, make new card on page if valid.
-submitBtn.submit = function (event) {
-
-  event.preventDefault();
-
-  let title = document.querySelector("#title").value;
-  let author = document.querySelector("#author").value;
-  let pages = parseInt(document.querySelector("#pages").value);
-  let read = document.querySelector("#read").checked;
-
- 
-
-  addBookToLibrary(title, author, pages, read);
-
-  let titleInput = document.querySelector("#title");
-  let authorInput = document.querySelector("#author");
-  let pagesInput = document.querySelector("#pages");
-  let readInput = document.querySelector("#read");
-
-  titleInput.value = "";
-  authorInput.value = "";
-  pagesInput.value = "";
-  readInput.checked = false;
-
-  dialog.close();
-};
+//Because we need to do form validation on form element wrapped inside dialog element, we select the form and validate when submit button is pressed before allowing other events to happen. We do not use onclick or onsubmit on the submit button directly unless we write our own validation function and use it inside here. Built-in HTML5 validation can only happen on form element directly. 
