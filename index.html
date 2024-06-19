@@ -17,39 +17,41 @@
         <div id="library_title">library</div>
     <button type="button" class="add_button">+ ADD BOOK</button>
     </div>
+    <div id="unblurred" style="display:none">
     <dialog class="dialog">
       <form action="#" method="post" id="add_form">
         <div class="dialog_header">
-          <div class="dialog_title">Add New Book</div>
+          <div class="dialog_title">ADD NEW BOOK</div>
           <button class="cancel_button">&times;</button>
         </div>
         <div class="dialog_content">
           <div class="dialog_input">
-            <input type="text" id="title" name="title" placeholder="Title" minlength="1" required />
+            <input type="text" id="title" name="title" placeholder="TITLE" minlength="1" required />
           </div>
           <div class="dialog_input">
             <input
               type="text"
               id="author"
               name="author"
-              placeholder="Author"
+              placeholder="AUTHOR"
               minlength="1"
               required
             />
           </div>
           <div class="dialog_input">
-            <input type="number" id="pages" name="pages" placeholder="Pages" min="1" required />
+            <input type="number" id="pages" name="pages" placeholder="PAGES" min="1" required />
           </div>
           <div class="dialog_input" id="readcheck">
-            This book is read
+            THIS BOOK IS READ
             <input type="checkbox" id="read" name="read" />
           </div>
         </div>
         <div class="dialog_submit">
-          <button type="submit" class="submit_button">Submit</button>
+          <button type="submit" class="submit_button">SUBMIT</button>
         </div>
       </form>
     </dialog>
+</div>
     <div id="librarybody">
       <div id="catalog">
         <div class="book_card">
