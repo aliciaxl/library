@@ -45,6 +45,9 @@ function createBookInfo(value) {
     return bookInfo;
 }
 
+let readColor = '#24aa57';
+let unreadColor = '#f25bb3';
+
 function createBookReadToggle(value) {
     const cardRead = document.createElement("div");
     cardRead.setAttribute("class", "book_info");
@@ -55,19 +58,19 @@ function createBookReadToggle(value) {
 
     //background color values of toggle based on initial form input
     if (value) {
-        cardRead.style.backgroundColor = '#affdc0';
+        cardRead.style.backgroundColor = readColor;
     } else {
-        cardRead.style.backgroundColor = '#fdc4af';
+        cardRead.style.backgroundColor = unreadColor;
     }
 
     //switch toggle when cardRead div is clicked
     cardRead.addEventListener ("click" , () => {
         if (cardRead.innerHTML === "Read") {
             cardRead.innerHTML = "Unread";
-            cardRead.style.backgroundColor = '#fdc4af';
+            cardRead.style.backgroundColor = unreadColor;
         } else {
             cardRead.innerHTML = "Read";
-            cardRead.style.backgroundColor = '#affdc0';
+            cardRead.style.backgroundColor = readColor;
         }
     });
 
