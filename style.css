@@ -253,7 +253,7 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: center;
     background-color: white;
-    border: solid black;
+    border: solid 1.6px black;
     border-radius: 8px;
     min-width: 280px;
     min-height: 300px;
