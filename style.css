@@ -160,9 +160,10 @@ label {
 .dialog_input {
     display: flex;
     align-items: center;
+    margin-top: 4px;
     margin-bottom: 16px;
     border-radius: 8px;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 input {
@@ -222,6 +223,9 @@ input[type=number] {
 
 #read {
     width: 40px;
+    height: 16px;
+    width: 16px;
+    margin-left: 20px;
 }
 
 input[type="checkbox"] {
