@@ -134,6 +134,11 @@ header {
     border: solid 1px black;
     background-color: #a6afdd;
     border-radius: 8px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dialog_content {
@@ -346,7 +351,7 @@ input[type="checkbox"] {
         
             #library_title {
                 /* margin: -32px 0px; */
-                font-size: 88px;
+                font-size: 80px;
             }
         
             .add_button {
@@ -358,7 +363,7 @@ input[type="checkbox"] {
             }
     
             .add_button {
-                font-size: 1em;
+                font-size: 1.1em;
             }
         
             }
