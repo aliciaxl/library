@@ -338,3 +338,27 @@ input[type="checkbox"] {
     
         }
     
+        @media only screen and (max-width: 432px) {
+
+            #catalog {
+                grid-template-columns: 1fr;
+            }
+        
+            #library_title {
+                /* margin: -32px 0px; */
+                font-size: 88px;
+            }
+        
+            .add_button {
+                margin: -12px 0px 16px 0px;
+            }
+    
+            .dialog_input {
+                margin-bottom: 8px;
+            }
+    
+            .add_button {
+                font-size: 1em;
+            }
+        
+            }
