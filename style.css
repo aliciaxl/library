@@ -96,6 +96,7 @@ header {
 
 .dialog {
     width: 50%;
+    min-width: 260px;
     max-width: 280px;
     border-radius: 5px;
     border: solid 2px black;
@@ -340,17 +341,13 @@ input[type="checkbox"] {
             margin: -12px 0px 16px 0px;
         }
 
-        .dialog_input {
-            margin-bottom: 8px;
-        }
-
         .add_button {
             font-size: 1.2em;
         }
     
         }
     
-        @media only screen and (max-width: 432px) {
+    @media only screen and (max-width: 432px) {
 
             #catalog {
                 grid-template-columns: 1fr;
@@ -363,10 +360,6 @@ input[type="checkbox"] {
         
             .add_button {
                 margin: -12px 0px 16px 0px;
-            }
-    
-            .dialog_input {
-                margin-bottom: 8px;
             }
     
             .add_button {

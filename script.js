@@ -135,7 +135,3 @@ addForm.addEventListener("submit", function (event) {
 
 // const dialog = document.querySelector(".dialog");
 // dialog.showModal();
-
-for (let i = 0; i <5; i++) {
-  addBookToLibrary("Alicia is cool", "Duke")
-}
