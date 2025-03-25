@@ -4,7 +4,7 @@ Library app that allows user to input new book and displays book cards with opti
 
 [Live preview](https://aliciaxl.github.io/library/)
 
-![image.alt](https://github.com/aliciaxl/restaurant-page/blob/fc68104f8745ae07f61bb683b9045b76b44209d2/restaurant-page-live.png)
+![image.alt](https://github.com/aliciaxl/library/blob/d0b27867624d8075164f35e62089a780fbb3f478/library-live.png)
 
 ## Features
  - Form to input new book, option to update book read status, responsive to mobile and tablet screens.
